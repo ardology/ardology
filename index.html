@@ -4,11 +4,33 @@
     <meta charset="utf-8">
     <title>portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Kanit:900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe1df21b15.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="portstyle.css">
   </head>
   <body>
 
   <h1>FRONTPOWER</h1>
+
+  <div id="navbar" class="nav_container">
+    <a href="javascript:void(0)" class="closeBtn"
+    onclick="closeNav()">&times;</a>
+    <div class="nav_content">
+      <a href="#">about</a>
+      <a href="#">art</a>
+      <a href="#">music</a>
+      <a href="#">contact</a>
+    </div>
+  </div>
+  <span onclick="openNav()">&#9776; open</span>
+
+<script>
+  function openNav () {
+    document.getElementById("navbar").style.width = "100%";
+  }
+  function closeNav () {
+    document.getElementById("navbar").style.width = "0%";
+  }
+</script>
 
   </body>
 </html>
