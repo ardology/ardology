@@ -1,13 +1,13 @@
 body{
   background-color: rgb(30, 30, 30);
-  margin: 0;
-  padding: 0;
+
 }
 h1{
   color: white;
   font-size: 10em;
   font-family: 'Kanit', sans-serif;
   text-align: center;
+  letter-spacing: 15px;
   cursor: none;
   animation: glitch 0.5s steps(100) infinite;
 }
@@ -16,6 +16,7 @@ h1{
   0% {text-shadow: 5px 0 0 red, -5px 0 0 blue;}
   25% {text-shadow: 1px 0 0 pink, -10px 0 0 red;}
   50% {text-shadow: -10px 0 0 yellow, 10px 0 0 violet;}
+  55% {text-shadow: -10px 0 0 black, 10px 00 white;}
   75% {text-shadow: 50px 0 0 orange, -50px 0 0 purple;}
   100% {text-shadow: 0.5px 0 0 green, -0.5px 0 0 blue;}
 }
@@ -39,24 +40,27 @@ h1{
   text-align: center;
   margin-top: 30px;
 }
-.nav_container a {
-  padding: 8px;
+.nav_content a {
   text-decoration: none;
   font-size: 36px;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Kanit', sans-serif;
   color: white;
   display: block;
-  transition: 0.3s
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 .nav_container a:hover, .nav_container a:focus {
-  color: #f1f1f1;
+  color: rgb(30, 30, 30);
 }
 .nav_container .closeBtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  right: 20px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
 }
+/*dunno for wat dis is*/
 @media screen and (max-height: 450px) {
   .nav_container a {font-size: 20px}
   .nav_container .closeBtn {
@@ -64,10 +68,3 @@ h1{
   top: 15px;
   right: 35px;
   }
-span{
-  cursor:pointer;
-  top:20px;
-  left:45px;
-  color:white;
-  font-size:30px
-}

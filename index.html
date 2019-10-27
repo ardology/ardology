@@ -9,6 +9,9 @@
   </head>
   <body>
 
+  <button id="menu_button" onclick="openNav()" style="position:fixed;color:white;top:20px;right:20px;background-color:transparent;cursor:pointer;border:none;font-size:25px;outline:none;"><i class="fas fa-bars"></i></button>
+
+
   <h1>FRONTPOWER</h1>
 
   <div id="navbar" class="nav_container">
@@ -21,16 +24,16 @@
       <a href="#">contact</a>
     </div>
   </div>
-  <span onclick="openNav()">&#9776; open</span>
 
-<script>
-  function openNav () {
-    document.getElementById("navbar").style.width = "100%";
-  }
-  function closeNav () {
-    document.getElementById("navbar").style.width = "0%";
-  }
-</script>
 
+
+    <script>
+      function openNav () {
+        document.getElementById("navbar").style.width = "100%";
+      }
+      function closeNav () {
+        document.getElementById("navbar").style.width = "0%";
+      }
+    </script>
   </body>
 </html>
