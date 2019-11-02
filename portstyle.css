@@ -12,6 +12,9 @@ h1{
   animation: glitch 0.5s steps(100) infinite;
 }
 
+h2{
+  color: white;
+}
 @keyframes glitch {
   0% {text-shadow: 5px 0 0 red, -5px 0 0 blue;}
   25% {text-shadow: 1px 0 0 pink, -10px 0 0 red;}
