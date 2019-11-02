@@ -2,7 +2,7 @@ body{
   background-color: rgb(30, 30, 30);
 
 }
-h1{
+#header{
   color: white;
   font-size: 10em;
   font-family: 'Kanit', sans-serif;
