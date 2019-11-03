@@ -52,7 +52,7 @@ background-color: black;
   letter-spacing: 5px;
 }
 .nav_container a:hover, .nav_container a:focus {
-  color: rgb(79,0,52)
+  color: rgb(57,255,20);
 }
 
 .nav_container .closeBtn {
