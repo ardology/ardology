@@ -5,8 +5,43 @@ body{
 
 h1{
   font-size: 6em;
-  color: white;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
 }
 #ardo{
   width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.wrapper{
+  display: flex;
+  height: 100%;
+}
+.parallax{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 8px;
+  perspective-origin: 0%;
+  display: flex;
+}
+.background{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(0px);
+  background-attachment: fixed;
+}
+.foreground{
+  margin-top: auto;
+  margin-bottom: 50px;
+  transform-origin: 0;
+  transform: translateZ(3px) scale(0.625);
 }
