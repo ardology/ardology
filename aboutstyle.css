@@ -1,47 +1,89 @@
 body{
-  background-image: url("images/hsvnoise.png");
+  background-image: url("images/xo.jpg");
   background-attachment: fixed;
-}
-
-h1{
-  font-size: 6em;
-  color: transparent;
-  -webkit-text-stroke: 1px white;
-}
-#ardo{
-  width: 50%;
-  height: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.wrapper{
-  display: flex;
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .parallax{
-  position: relative;
-  width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
-  overflow-y: scroll;
-  perspective: 8px;
-  perspective-origin: 0%;
-  display: flex;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
 }
-.background{
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 100%;
-  transform: translateZ(0px);
-  background-attachment: fixed;
+.parallax__group{
+  position: relative;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
-.foreground{
-  margin-top: auto;
-  margin-bottom: 50px;
-  transform-origin: 0;
-  transform: translateZ(3px) scale(0.625);
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+.parallax__group {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+.parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+.parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+.parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+.parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+
+  }
+
+  #ardopic{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 15%;
+  }
+
+#header{
+display: block;
+color: transparent;
+font-size: 10em;
+text-align: center;
+font-family: 'Alfa Slab One', cursive;
+-webkit-text-stroke: 1px white;
+}
+
+#left_text{
+  text-align: left;
+}
+#right_text{
+  text-align: right;
+}
+.typo{
+  font-family: 'Alfa Slab One';
+  font-size: 7em;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  margin: 0;
+  padding: 1%;
 }
