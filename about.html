@@ -3,80 +3,55 @@
   <head>
     <meta charset="utf-8">
     <title>ABOUT</title>
-    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Patua+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe1df21b15.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="aboutstyle.css">
   </head>
   <body>
+    <button id="button" onclick="topFunction()"><i class="fas fa-angle-double-up"></i></button>
+
     <div class="parallax">
-
-    <div id="group1" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">base layer</div>
-        <h1 id="header">about</h1>
-      </div>
-    </div>
-
-    <div id="group2" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer
-
-        </div>
-      </div>
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
-      </div>
-    </div>
-
-    <div id="group3" class="parallax__group">
-      <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-
     <div id="group4" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-        <p class="typo" id="left_text">Hi!<br>My name is<br>Ardo</p>
-        <p class="typo" id="right_text">and im</p>
-        <p class="typo" id="left_text">26 years old</p>
-        <p class="typo" id="right_text">I study computer sciences</p>
+        <div id="group1" class="parallax__group">
+          <div class="parallax__layer parallax__layer--base">
+                <h1 id="header">about</h1>
+          </div>
+        </div>
+          <div class="typo">
+            <p>Hi and Welcome</p>
+            <p>My name<br>is<br>Ardowan</p>
+            <p>and i am 26 years old</p>
+            <p>I study computer sciences</p>
+            <p>at the<br>Frankfurt University<br>of Applied Sciences</p>
+            <p>You are now visiting my portfolio</p>
+            <p>currently i am looking<br>for an internship</p>
+            <p>as a<br>frontned developer</p>
+          </div>
       </div>
       <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
       </div>
       <div class="parallax__layer parallax__layer--deep">
-        <div class="title">Deep Background Layer</div>
-          <img src="images/ardo.JPG" id="ardopic">
+          <img src="images/ardo_sunset.jpg" id="ardopic">
       </div>
     </div>
-
-    <div id="group5" class="parallax__group">
-      <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-
-    <div id="group6" class="parallax__group">
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-
-    <div id="group7" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-
   </div>
+
+  <script>
+    var bButton = document.getElementById("button");
+
+    window.onscroll = function(){scrollFunction()};
+    function scrollFunction(){
+      if(document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20){
+        bButton.style.display = "block";
+      }else{
+        bButton.style.display = "none";
+      }
+    }
+    function topFunction(){
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
   </body>
 </html>

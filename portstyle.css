@@ -53,7 +53,7 @@ background-color: black;
   -webkit-text-stroke: 1px white;
 }
 .nav_container a:hover, .nav_container a:focus {
-  color: rgb(57,255,20);
+  color: white;
 }
 
 .nav_container .closeBtn {

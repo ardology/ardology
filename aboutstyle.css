@@ -3,6 +3,7 @@ body{
   background-attachment: fixed;
   margin: 0;
   padding: 0;
+  background-size: cover;
 }
 .parallax{
   height: 100vh;
@@ -19,16 +20,16 @@ body{
 }
 
 .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   }
 
 .parallax__group {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
   }
 
 .parallax__layer--fore {
@@ -48,42 +49,49 @@ body{
     transform: translateZ(-300px) scale(2);
     z-index: 3;
   }
-
 .parallax__layer--deep {
-    -webkit-transform: translateZ(-600px) scale(3);
-    transform: translateZ(-600px) scale(3);
-    z-index: 2;
-
+  -webkit-transform: translateZ(-600px) scale(3);
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
   }
 
-  #ardopic{
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 15%;
-  }
+#ardopic{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 50%;
+}
 
 #header{
-display: block;
-color: transparent;
-font-size: 10em;
-text-align: center;
-font-family: 'Alfa Slab One', cursive;
--webkit-text-stroke: 1px white;
+  display: block;
+  color: transparent;
+  font-size: 15vw;
+  text-align: center;
+  font-family: 'Alfa Slab One', cursive;
+  -webkit-text-stroke: 1px white;
+  letter-spacing: 10px;
 }
 
-#left_text{
-  text-align: left;
-}
-#right_text{
-  text-align: right;
-}
 .typo{
-  font-family: 'Alfa Slab One';
+  font-family: 'Patua One', cursive;
   font-size: 7em;
-  -webkit-text-stroke: 2px white;
   color: transparent;
-  margin: 0;
+  margin: -10px;
   padding: 1%;
+  text-align: center;
+  -webkit-text-stroke: 2px white;
+}
+
+#button{
+  bottom: 5%;
+  right: 2%;
+  position: fixed;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  color: white;
+  background-color: transparent;
+  z-index: 99;
+  cursor: pointer;
 }
