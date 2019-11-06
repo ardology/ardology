@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="aboutstyle.css">
   </head>
   <body>
-    <button id="button" onclick="topFunction()"><i class="fas fa-angle-double-up"></i></button>
+    <button id="mybutton" onclick="backToTopFunction()"><i class="fas fa-angle-double-up"></i></button>
 
     <div class="parallax">
     <div id="group4" class="parallax__group">
@@ -38,18 +38,19 @@
   </div>
 
   <script>
-    var bButton = document.getElementById("button");
+    var backbutton = document.getElementById("mybutton");
+    window.onscroll = function () {scrollFunction()};
 
-    window.onscroll = function(){scrollFunction()};
-    function scrollFunction(){
+    function scrollFunction() {
       if(document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20){
-        bButton.style.display = "block";
+        backbutton.style.display = "block";
       }else{
-        bButton.style.display = "none";
+        backbutton.style.display = "none";
       }
     }
-    function topFunction(){
+    function backToTopFunction() {
+      document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
   </script>

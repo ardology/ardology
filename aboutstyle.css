@@ -5,6 +5,9 @@ body{
   padding: 0;
   background-size: cover;
 }
+html{
+  scroll-behavior: smooth;
+}
 .parallax{
   height: 100vh;
   overflow-x: hidden;
@@ -83,7 +86,7 @@ body{
   -webkit-text-stroke: 2px white;
 }
 
-#button{
+#mybutton{
   bottom: 5%;
   right: 2%;
   position: fixed;
