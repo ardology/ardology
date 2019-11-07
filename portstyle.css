@@ -1,5 +1,5 @@
 body{
-background-color: black;
+background-color: rgb(8,8,8);
 }
 
 #header{
@@ -70,17 +70,4 @@ p{
   margin: 0;
   text-transform: uppercase;
   font-family: 'Kanit', sans-serif;
-}
-#mybutton{
-  display: none;
-  bottom: 5%;
-  right: 2%;
-  position: fixed;
-  border: none;
-  outline: none;
-  font-size: 30px;
-  color: white;
-  background-color: transparent;
-  z-index: 99;
-  cursor: pointer;
 }

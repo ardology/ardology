@@ -9,6 +9,19 @@
   </head>
   <body>
     <button id="mybutton" onclick="backToTopFunction()"><i class="fas fa-angle-double-up"></i></button>
+    <button id="menu_button" onclick="openNav()"><i class="fas fa-bars"></i></button>
+
+    <div id="navbar" class="nav_container">
+      <a href="javascript:void(0)" class="closeBtn"
+      onclick="closeNav()">&times;</a>
+      <div class="nav_content">
+        <a href="https://ardology.github.io/ardology/about">about</a>
+        <a href="https://ardology.github.io/ardology/artpage">art</a>
+        <a href="#" id="music">music</a>
+        <a href="#" id="contact">contact</a>
+      </div>
+    </div>
+
 
     <div class="parallax">
     <div id="group4" class="parallax__group">
@@ -27,32 +40,40 @@
             <p>You are now visiting my portfolio</p>
             <p>currently i am looking<br>for an internship</p>
             <p>as a<br>frontned developer</p>
+            <p>i like to combine<br>creativity & technology<br>into concepts</p>
+            <p>i want to<br>improve my skills</p>
+            <p>software development<br>web development<br>application development<br>user interface<br>user experience</p>
           </div>
       </div>
       <div class="parallax__layer parallax__layer--back">
       </div>
       <div class="parallax__layer parallax__layer--deep">
           <img src="images/ardo_sunset.jpg" id="ardopic">
+          <img src="images/ardo.JPG" id="ardopix">
       </div>
     </div>
   </div>
-
   <script>
-    var backbutton = document.getElementById("mybutton");
-    window.onscroll = function () {scrollFunction()};
+  var backbutton = document.getElementById("mybutton");
+  window.onscroll = function () {scrollFunction()};
 
-    function scrollFunction() {
-      if(document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20){
-        backbutton.style.display = "block";
-      }else{
-        backbutton.style.display = "none";
-      }
+  function scrollFunction() {
+    if(document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20){
+      backbutton.style.display = "block";
+    }else{
+      backbutton.style.display = "none";
     }
-    function backToTopFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+  }
+  function backToTopFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  function openNav () {
+    document.getElementById("navbar").style.width = "100%";
+  }
+  function closeNav () {
+    document.getElementById("navbar").style.width = "0%";
   </script>
   </body>
 </html>
