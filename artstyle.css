@@ -38,3 +38,10 @@ body, html{
   background-color: #f4f4f4;
   color: #666;
 }
+#back_button{
+  font-size: 50vw;
+  background-color: transparent;
+  color: black;
+  border: none;
+  outline: none;
+}
