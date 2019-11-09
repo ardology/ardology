@@ -3,23 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>ART</title>
+    <script src="https://kit.fontawesome.com/fe1df21b15.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="artstyle.css">
   </head>
-  <style media="screen">
-  .container{
-    height: 400px;
-    top: 0;
-  }
-  </style>
   <body>
-    <header>
-      <div class="container">
-        <h1 id="h1">calligraphy</h1>
-        <h1 id="h2">collage</h1>
-        <h1 id="h3">graffiti</h1>
-        <h1 id="h4">drawings</h1>
+    <button id="kakabutton" onclick="backTopfunction()" style="display:none;position:fixed;right:20px;bottom:20px;font-size:20px;cursor:pointer"><i class="fas fa-angle-double-up"></i></button>
+    <div class="head_pic">
+      <div class="head_text">
+        art
       </div>
-    </header>
+    </div>
 
+    <section class="section section-light">
+      <h2>section one</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum temporibus. Laborum ad temporibus ex, omnis!</p>
+    </section>
+
+    <script>
+
+
+      var mybutton = document.getElementById("kakabutton");
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+
+      function backTopfunction(){
+        document.documentElement.scrollTop = 0;
+      }
+
+
+    </script>
   </body>
 </html>

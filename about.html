@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="aboutstyle.css">
   </head>
   <body>
-    <button id="mybutton" onclick="backToTopFunction()"><i class="fas fa-angle-double-up"></i></button>
+    <button id="backbutton" onclick="backToTopFunction()" ><i class="fas fa-angle-double-up"></i></button>
     <button id="menu_button" onclick="openNav()"><i class="fas fa-bars"></i></button>
 
     <div id="navbar" class="nav_container">
@@ -54,26 +54,28 @@
     </div>
   </div>
   <script>
-  var backbutton = document.getElementById("mybutton");
-  window.onscroll = function () {scrollFunction()};
+  alert('Hallo Welt!');
 
-  function scrollFunction() {
-    if(document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20){
-      backbutton.style.display = "block";
-    }else{
-      backbutton.style.display = "none";
+  var kakabutton = document.getElementById("backbutton");
+  window.onscroll = function() {showbuttonFunction()};
+  function showbuttonFunction () {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      kakabutton.style.display = "block";
+    } else {
+      kakabutton.style.display = "none";
     }
   }
   function backToTopFunction() {
-    document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
+
   function openNav () {
     document.getElementById("navbar").style.width = "100%";
   }
   function closeNav () {
     document.getElementById("navbar").style.width = "0%";
+  }
   </script>
   </body>
 </html>

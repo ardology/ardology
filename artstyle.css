@@ -1,75 +1,40 @@
-body{
-  background-image: url("images/grey.png");
-  padding: 0;
+body, html{
+  height: 100%;
   margin: 0;
+  line-height:  1.8em;
+  color: #666;
+  scroll-behavior: smooth;
 }
 
-.container h1{
-  text-transform: uppercase;
-  padding: 0;
-  margin: 10px;
-  line-height: 0.7em;
+.head_pic{
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.head_pic{
+  background-image: url("images/art_header.jpg");
+  height: 100%;
+}
+.head_text{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  font-weight: bolder;
+  font-size: 10em;
+  text-align: center;
   color: white;
-  font-size: 6em;
-  /*starting position*/
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  /*apply animation to this element*/
-  -moz-animation: container 15s linear infinite;
-  -webkit-animation: container 15s linear infinite;
-  animation: container 15s linear infinite;
+  font-size: 10em;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
 }
-#h1{
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  /*apply animation to this element*/
-  -moz-animation: container 14s linear infinite;
-  -webkit-animation: container 14s linear infinite;
-  animation: container 14s linear infinite;
+.section{
+  text-align: center;
+  padding: 50px 80px;
 }
-#h2{
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  /*apply animation to this element*/
-  -moz-animation: container 13s linear infinite;
-  -webkit-animation: container 13s linear infinite;
-  animation: container 13s linear infinite;
-}
-#h3{
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  /*apply animation to this element*/
-  -moz-animation: container 12s linear infinite;
-  -webkit-animation: container 12s linear infinite;
-  animation: container 12s linear infinite;
-}
-#h4{
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  /*apply animation to this element*/
-  -moz-animation: container 11s linear infinite;
-  -webkit-animation: container 11s linear infinite;
-  animation: container 11s linear infinite;
-}
-
-@-moz-keyframes container{
-  0% {-moz-transform: translateX(100%);}
-  100% {-webkit-transform: translateX(100%);}
-}
-@keyframes container{
-  0%   {
- -moz-transform: translateX(100%); /* Firefox bug fix */
- -webkit-transform: translateX(100%); /* Firefox bug fix */
- transform: translateX(100%);
- }
- 100% {
- -moz-transform: translateX(-100%); /* Firefox bug fix */
- -webkit-transform: translateX(-100%); /* Firefox bug fix */
- transform: translateX(-100%);
- }
+.section-light{
+  background-color: #f4f4f4;
+  color: #666;
 }

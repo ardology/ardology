@@ -96,7 +96,7 @@ html{
   -webkit-text-stroke: 2px white;
 }
 
-#mybutton{
+#backbutton{
   bottom: 5%;
   right: 2%;
   position: fixed;
