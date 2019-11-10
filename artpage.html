@@ -3,25 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>ART</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fe1df21b15.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="artstyle.css">
   </head>
   <body>
-    <button id="back_button" onclick="backTopfunction()" style="display:none;position:fixed;right:20px;bottom:20px;font-size:20px;cursor:pointer"><i class="fas fa-angle-double-up"></i></button>
-    <div class="head_pic">
-      <div class="head_text">
+    <button id="open_menu_button" onclick="openMenu()"><i class="fas fa-bars"></i></button>
+
+    <div id="navbar" class="nav_container">
+      <a class="close_menu_button" onclick="closeMenu()">&times;</a>
+      <div class="nav_content">
+        <a href="https://ardology.github.io/ardology/about">about</a>
+        <a href="https://ardology.github.io/ardology/artpage">art</a>
+        <a href="#">inspiration</a>
+        <a href="#">contact</a>
+      </div>
+    </div>
+    <button id="back_button" onclick="backTopfunction()"><i class="fas fa-angle-double-up"></i></button>
+    <div class="headline_pic">
+      <div class="headline">
         art
       </div>
     </div>
 
-    <section class="section section-light">
-      <h2>section one</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum temporibus. Laborum ad temporibus ex, omnis!</p>
+    <section class="section">
+      <div class="section_headline">
+        <h2>calligraphy</h2>
+      </div>
+      <p>besides univerity and work i love to draw. i do a lot of different stuff and always intrested in something new and creative.</p>
+
+
+      <div class="call_picture" class="modalpic">
+          <img src="images/call1.jpg" onclick="showImg(this)" alt="hallo">
+          <img src="images/call2.jpg" onclick="showImg(this)" alt="hallo">
+          <img src="images/call3.jpg" onclick="showImg(this)" alt="hallo">
+          <img src="images/call4.jpg" onclick="showImg(this)" alt="hallo">
+
+      </div>
+
+      <div class="modal" id="calliModal">
+        <span class="close">&times;</span>
+        <img class="modal_content" id="calligraphy_work">
+        <div id="caption"></div>
+      </div>
     </section>
 
+
     <script>
-
-
       var mybutton = document.getElementById("back_button");
       window.onscroll = function() {scrollFunction()};
 
@@ -33,12 +61,33 @@
         }
       }
 
-
       function backTopfunction(){
         document.documentElement.scrollTop = 0;
       }
 
+      function openMenu() {
+        document.getElementById("navbar").style.width = "100%";
+      }
 
+      function closeMenu() {
+        document.getElementById("navbar").style.width = "0%";
+      }
+
+      var modal = document.getElementById("calliModal");
+      var img = document.getElementsByClassName("call_picture");
+      var modalImg = document.getElementById("calligraphy_work");
+      var captionText = document.getElementById("caption");
+
+      function showImg(ele){
+        modal.style.display = "block";
+        modalImg.src = ele.src;
+        captionText.innerHTML = ele.alt;
+      }
+      //getting span and closing span
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
     </script>
   </body>
 </html>
