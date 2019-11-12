@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>ART</title>
     <link href="https://fonts.googleapis.com/css?family=Kanit:900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fe1df21b15.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="artstyle.css">
+    <link rel="stylesheet" type="text/css" href="art.css">
   </head>
   <body>
     <button id="open_menu_button" onclick="openMenu()"><i class="fas fa-bars"></i></button>
@@ -20,6 +21,7 @@
       </div>
     </div>
     <button id="back_button" onclick="backTopfunction()"><i class="fas fa-angle-double-up"></i></button>
+
     <div class="headline_pic">
       <div class="headline">
         art
@@ -27,32 +29,73 @@
     </div>
 
     <section class="section">
-      <div class="section_headline">
+      <section class="introduction_section">
+        <p>besides university and work i have always been drawing. I love to try diffrent styles and experiment with new tools and concepts.</p>
+        <p>here is a small compilation of artworks of mine.</p>
+        <p>enjoy!</p>
+      </section>
+    </section>
+    <section class="section">
+      <section class="introduction_section">
         <h2>calligraphy</h2>
-      </div>
-      <p>besides univerity and work i love to draw. i do a lot of different stuff and always intrested in something new and creative.</p>
-
-
-      <div class="call_picture" class="modalpic">
-          <img src="images/call1.jpg" onclick="showImg(this)" alt="hallo">
-          <img src="images/call2.jpg" onclick="showImg(this)" alt="hallo">
-          <img src="images/call3.jpg" onclick="showImg(this)" alt="hallo">
-          <img src="images/call4.jpg" onclick="showImg(this)" alt="hallo">
-
+      </section>
+      <div class="pictures">
+          <img src="images/call1.jpg" id="modalpic" onclick="showImg(this)" alt="hallo">
+          <img src="images/call2.jpg" id="modalpic" onclick="showImg(this)" alt="hallo">
+          <img src="images/call3.jpg" id="modalpic" onclick="showImg(this)" alt="hallo">
+          <img src="images/call4.jpg" id="modalpic" onclick="showImg(this)" alt="hallo">
       </div>
 
-      <div class="modal" id="calliModal">
-        <span class="close">&times;</span>
-        <img class="modal_content" id="calligraphy_work">
-        <div id="caption"></div>
+    </section>
+
+    <section class="section">
+      <section class="introduction_section">
+        <h2>graphic collage</h2>
+      </section>
+      <div class="pictures">
+        <img src="images/graph1.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+        <img src="images/graph2.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+        <img src="images/graph3.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+        <img src="images/graph4.png" id="modalpic" onclick="showImg(this)" alt="hello">
       </div>
     </section>
+
+    <section class="section">
+      <section class="introduction_section">
+        <h2>drawings</h2>
+      </section>
+      <div class="drawings">
+        <img src="images/draw1.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+        <img src="images/draw2.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+        <img src="images/draw3.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+        <img src="images/draw4.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+      </div>
+    </section>
+
+    <section class="section">
+      <section class="introduction_section">
+        <h2>paintings</h2>
+      </section>
+      <div class="pictures">
+        <img src="images/paint1.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+        <img src="images/paint2.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+        <img src="images/paint3.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
+
+      </div>
+    </section>
+
+    <div class="modal" id="myModal">
+      <span class="close">&times;</span>
+      <img class="modal_content" id="modal_image">
+      <div id="caption"></div>
+    </div>
 
 
     <script>
       var mybutton = document.getElementById("back_button");
       window.onscroll = function() {scrollFunction()};
 
+      //showing button when user scrolls down
       function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
           mybutton.style.display = "block";
@@ -73,11 +116,12 @@
         document.getElementById("navbar").style.width = "0%";
       }
 
-      var modal = document.getElementById("calliModal");
-      var img = document.getElementsByClassName("call_picture");
-      var modalImg = document.getElementById("calligraphy_work");
+      var modal = document.getElementById("myModal");
+      var img = document.getElementsByClassName("pictures");
+      var modalImg = document.getElementById("modal_image");
       var captionText = document.getElementById("caption");
 
+      //showing images
       function showImg(ele){
         modal.style.display = "block";
         modalImg.src = ele.src;

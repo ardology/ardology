@@ -30,37 +30,41 @@ body, html{
 }
 
 .section{
-  padding: 50px 80px;
-  background-color: rgb(30, 30, 30);
-  color: #666;
+  padding: 100px 10px;
+  background-color: white;
 }
-.section_headline{
-  position: relative;
-  top: 10%;
-  right: 40px;
-  color: white;
-  font-size: 7em;
-  z-index: 2;
+.introduction_section{
+  margin: auto;
+  font-size: 4em;
+  text-align: center;
+  font-size: bolder;
+}
+p{
+  font-family: 'Montserrat', sans-serif;
 }
 
 #back_button{
+  display: none;
   font-size: 2.5em;
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: transparent;
-  color: #f4f4f4;
+  color: rgb(30, 30, 30);
   cursor: pointer;
   border: none;
   outline: none;
   z-index: auto;
 }
 
-.call_picture img{
-  display: block;
+img{
+  border-radius: 5px;
+  align-items: center;
   cursor: pointer;
   max-width: 300px;
+  padding: 5px;
 }
+
 .nav_container{
   height: 100%;
   top: 0;
@@ -102,8 +106,7 @@ body, html{
 }
 #open_menu_button{
   position:fixed;
-  color:white;
-  mix-blend-mode: difference;
+  color: rgb(30, 30, 30);
   top:20px;
   right:20px;
   background-color:transparent;
@@ -113,19 +116,15 @@ body, html{
   outline:none;
   z-index: 1;
 }
-.modalpic{
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.modalpic:hover{
+
+#modalpic:hover, #modalpic:focus{
   opacity: 0.7;
 }
 .modal{
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 10px;
   left: 0;
   top: 0;
   width: 100%;
@@ -135,12 +134,25 @@ body, html{
   background-color: rgba(0,0,0,0.9);
 }
 .modal_content{
+  align-items: center;
   margin: auto;
-  width: 80%;
-  max-width: 500px;
-  animation-name: zoom;
+  display: block;
+  width: 60%;
+  max-width: 600px;
+  animation: zoom;
   animation-duration: 0.6s;
 }
+#caption {/*caption of modal image - same witdh as image*/
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
 @keyframes zoom{
   from {transform:scale(0)}
   to {transform:scale(1)}
@@ -158,8 +170,9 @@ body, html{
 .clsoe:hover, .close:focus{
   color: #bbb;
   text-decoration: none;
+  cursor: pointer;
 }
-@@media only scrren and (max-width: 700px) {
+@@media only scrren and (max-width: 600px) {
   .modal_content{
     width: 100%;
   }

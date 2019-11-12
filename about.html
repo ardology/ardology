@@ -5,14 +5,14 @@
     <title>ABOUT</title>
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Patua+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fe1df21b15.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="aboutstyle.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
   </head>
   <body>
-    <button id="backbutton" onclick="backToTopFunction()" ><i class="fas fa-angle-double-up"></i></button>
+    <button id="backbutton" onclick="backToTopFunction()"><i class="fas fa-angle-double-up"></i></button>
     <button id="menu_button" onclick="openNav()"><i class="fas fa-bars"></i></button>
 
     <div id="navbar" class="nav_container">
-      <a href="javascript:void(0)" class="closeBtn"
+      <a href="javascript:void(0)" class="closeNav"
       onclick="closeNav()">&times;</a>
       <div class="nav_content">
         <a href="https://ardology.github.io/ardology/about">about</a>
@@ -37,7 +37,6 @@
             <p>and i am 26 years old</p>
             <p>I study computer sciences</p>
             <p>at the<br>Frankfurt University<br>of Applied Sciences</p>
-            <p>You are now visiting my portfolio</p>
             <p>currently i am looking<br>for an internship</p>
             <p>as a<br>frontned developer</p>
             <p>i like to combine<br>creativity & technology<br>into concepts</p>
@@ -54,26 +53,22 @@
     </div>
   </div>
   <script>
-  alert('Hallo Welt!');
-
-  var kakabutton = document.getElementById("backbutton");
-  window.onscroll = function() {showbuttonFunction()};
-  function showbuttonFunction () {
-    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      kakabutton.style.display = "block";
+  var bbutton = document.getElementById("backbutton");
+  window.onscroll = function() {showbutton()};
+  function showbutton(){
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+      bbutton.style.display = "block";
     } else {
-      kakabutton.style.display = "none";
+      bbutton.style.display = "none";
     }
   }
-  function backToTopFunction() {
-    document.documentElement.scrollTop = 0;
+  function backToTopFunction(){
+    document.documentElement.scrollTop = "0";
   }
-
-
-  function openNav () {
+  function openNav(){
     document.getElementById("navbar").style.width = "100%";
   }
-  function closeNav () {
+  function closeNav(){
     document.getElementById("navbar").style.width = "0%";
   }
   </script>
