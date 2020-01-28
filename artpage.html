@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="art.css">
   </head>
   <body>
+    
     <button id="open_menu_button" onclick="openMenu()"><i class="fas fa-bars"></i></button>
 
     <div id="navbar" class="nav_container">
@@ -80,7 +81,6 @@
         <img src="images/paint1.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
         <img src="images/paint2.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
         <img src="images/paint3.jpg" id="modalpic" onclick="showImg(this)" alt="hello">
-
       </div>
     </section>
 
@@ -95,7 +95,7 @@
       var mybutton = document.getElementById("back_button");
       window.onscroll = function() {scrollFunction()};
 
-      //showing button when user scrolls down
+
       function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
           mybutton.style.display = "block";
