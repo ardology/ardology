@@ -73,3 +73,14 @@ p{
   text-transform: uppercase;
   font-family: 'Kanit', sans-serif;
 }
+#menu_button{
+  position: fixed;
+  color: white;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 25px;
+  outline: none;
+}
