@@ -10,6 +10,7 @@ body{
 h1, h2{
   color: white;
   font-family: 'Fjalla One', sans-serif;
+  text-align: center;
 }
 .formBox{
   box-sizing: border-box;
