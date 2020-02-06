@@ -3,24 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Contact</title>
+    <script src="https://kit.fontawesome.com/fe1df21b15.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="contact.css">
   </head>
   <body>
-    <div id="main">
-      <form class="formBox" action="index.html" method="post">
-        First name:
-        <input type="text" name="firstname">
-        <br>
-        Last name:
-        <input type="text" name="lastname">
-        <br>
-        E-mail:
-        <input type="text" name="mail">
-        <br>
-        Message:
-        <input type="text" name="message">
-      </form>
 
+    <button id="openMenuButton" onclick="openMenu()"><i class="fas fa-bars"></i></button>
+
+    <div id="navbar" class="nav_container">
+      <a class="closeMenuButton" onclick="closeMenu()">&times;</a>
+      <div class="nav_content">
+        <a href="https://ardology.github.io/ardology/">frontpower</a>
+        <a href="https://ardology.github.io/ardology/about">about</a>
+        <a href="https://ardology.github.io/ardology/artpage">art</a>
+      </div>
+    </div>
+
+    <div id="main">
+      <form class="formBox">
+        <h1>hi</h1>
+        <h2>i hope you enjoyed and liked my little portfolio</h2>
+        <h2>if you´d like to give me feeback</h2>
+        <h2>or</h2>
+        <h2>if you have a question</h2>
+        <h2>you can send me a message</h2>
+        <h2>you can contact me at this email</h2>
+        <h2>ar_do@hotmail.de</h2>
+      </form>
     </div>
   </body>
+  <script>
+
+    function openMenu(){
+      document.getElementById("navbar").style.width = "100%"
+    }
+    function closeMenu(){
+      document.getElementById("navbar").style.width = "0%"
+    }
+
+  </script>
 </html>

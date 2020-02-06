@@ -57,10 +57,10 @@ p{
 
 img{
   border-radius: 5px;
-  align-items: center;
   cursor: pointer;
   max-width: 300px;
   padding: 5px;
+  justify-content: center;
 }
 
 .nav_container{
