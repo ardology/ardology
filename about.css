@@ -30,8 +30,8 @@ body, html{
   }
 
 .parallax__group {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
   }
 
 .parallax__layer--fore {
@@ -43,18 +43,18 @@ body, html{
 .parallax__layer--base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    z-index: 4;
+    z-index: 0;
   }
 
 .parallax__layer--back {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
-    z-index: 3;
+    z-index: -3;
   }
 .parallax__layer--deep {
   -webkit-transform: translateZ(-600px) scale(3);
   transform: translateZ(-600px) scale(3);
-  z-index: 2;
+  z-index: -4;
   }
 
 #ardopic{
@@ -63,13 +63,6 @@ body, html{
   margin-right: auto;
   display: block;
   margin-top: 50%;
-}
-#ardopix{
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  margin-top: 20%;
 }
 
 #header{
@@ -104,7 +97,7 @@ body, html{
   font-size: 30px;
   color: white;
   background-color: transparent;
-  z-index: 1;
+  z-index: 999;
   cursor: pointer;
 }
 #menu_button{
@@ -116,9 +109,8 @@ body, html{
   color: white;
   border: none;
   outline: none;
-  z-index: auto;
   font-size: 25px;
-  display: none;
+  z-index: 1;
 }
 
 .nav_container{
@@ -138,6 +130,7 @@ body, html{
   position: absolute;
   width: 100%;
   text-align: center;
+  z-index: 2;
 }
 .nav_content a {
   font-family: 'Kanit', sans-serif;
@@ -160,5 +153,4 @@ body, html{
   color: white;
   text-decoration: none;
   cursor: pointer;
-  z-index: auto;
 }
